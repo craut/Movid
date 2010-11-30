@@ -44,6 +44,8 @@ protected:
 
 	virtual void trackBlobs();
 
+	void clearBlobs();
+
 	MODULE_INTERNALS();
 };
 

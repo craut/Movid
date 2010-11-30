@@ -89,6 +89,7 @@ void moTuioModule::start() {
 		this->property("ip").asString(),
 		this->property("port").asInteger()
 	);
+
 	moModule::start();
 }
 
@@ -146,6 +147,9 @@ void moTuioModule::notifyData(moDataStream *input) {
 		assert(moUtils::inList("tracked", (*it)->properties["implements"]->asString()));
 		assert(moUtils::inList("pos", (*it)->properties["implements"]->asString()));
 		msg->Add((*it)->properties["blob_id"]->asInteger());
+
+		LOGM(MO_INFO, "tracked :");
+		LOGM(MO_INFO, (*it)->properties["implements"]->asString());
 	}
 
 	bundle->Add(msg);
@@ -196,7 +200,8 @@ void moTuioModule::notifyData(moDataStream *input) {
 	msg->Add(this->fseq++);
 	bundle->Add(msg);
 
-    LOGM(MO_TRACE, "Sending OSC bundle");
+    //LOGM(MO_TRACE, "Sending OSC bundle");
+	LOGM(MO_INFO, "Sending OSC bundle");
 	this->osc->send(bundle);
 
 	delete bundle;

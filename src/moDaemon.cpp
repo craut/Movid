@@ -66,7 +66,10 @@ bool moDaemon::detach(std::string pidfilename) {
 	return(pid <= 0);
 #endif
 	// TODO implement other platform
-	LOG(MO_INFO, "This platform don't support detach yet.");
+	//LOG(MO_INFO, "This platform don't support detach yet.");
+
+	LOG(MO_INFO, "Try to free console on win");
+	FreeConsole();
 	return true;
 }
 

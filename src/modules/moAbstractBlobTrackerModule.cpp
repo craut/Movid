@@ -25,6 +25,9 @@ int moAbstractBlobTrackerModule::id_counter = 0;
 
 moAbstractBlobTrackerModule::moAbstractBlobTrackerModule() : moModule(MO_MODULE_INPUT | MO_MODULE_OUTPUT) {
 
+	
+	LOG(MO_INFO, "moAbstractBlobTrackerModule 0.17");
+
 	MODULE_INIT();
 
 	// initialize input/output
@@ -53,18 +56,36 @@ void moAbstractBlobTrackerModule::trackBlobs() {
 	// ID. If no such blob exists, make it a new blob and give it a new ID.
 }
 
+void moAbstractBlobTrackerModule::clearBlobs() {
+	moDataGenericList::iterator it;
+	for ( it = this->new_blobs->begin(); it != this->new_blobs->end(); it++ )
+		delete (*it);
+	this->new_blobs->clear();
+}
+
 void moAbstractBlobTrackerModule::update() {
+
 	moDataGenericList::iterator it, oit;
 	moDataGenericList *blobs;
 	std::string implements;
 	int max_age = this->property("max_age").asInteger();
 
-	// Clear new blob assignments from the last frame
-	this->new_blobs->clear();
+	//moDataGenericList* oldTmp = new moDataGenericList();
 
 	for (it = this->old_blobs->begin(); it != this->old_blobs->end(); it++) {
 		(*it)->properties["age"]->set((*it)->properties["age"]->asInteger() + 1);
+		/*if ((*it)->properties["age"]->asInteger() > max_age) {
+			oldTmp->push_back((*it));
+		}
+		else
+			delete (*it);*/
 	}
+
+	//this->old_blobs = oldTmp;
+
+	// Clear new blob assignments from the last frame
+	//this->clearBlobs();
+	this->new_blobs->clear();
 
 	// Copy the new blobs to our new_blobs list,
 	// afterwards we'll assign ID's
@@ -102,8 +123,10 @@ void moAbstractBlobTrackerModule::update() {
 			if (oid == id)
 				in = true;
 		}
-		if (!in && ((*oit)->properties["age"]->asInteger() <= max_age))
+		if (!i126)n && ((*oit)->properties["age"]->asInteger() <= max_age))
 			this->new_blobs->push_back(*oit);
+		else 
+			delete (*oit);
 	}
 
 	// Send the new blobs (possibly empty) down the pipeline

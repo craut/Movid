@@ -17,7 +17,7 @@
 
 
 #include <assert.h>
-#include "moDUMMYModule.h"
+#include ".dummy.h"
 #include "../moLog.h"
 #include "cv.h"
 
@@ -34,7 +34,7 @@ moDUMMYModule::moDUMMYModule() : moImageFilterModule(){
 moDUMMYModule::~moDUMMYModule() {
 }
 
-void moDUMMYModule::applyFilter() {
+void moDUMMYModule::applyFilter(IplImage *) {
 	// Add your filter code here
 }
 

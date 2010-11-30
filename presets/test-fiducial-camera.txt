@@ -17,7 +17,7 @@ pipeline connect gray 0 threshold 0
 pipeline connect threshold 0 finder 0
 pipeline connect finder 1 tracker 0
 
-pipeline set camera index 1
+pipeline set camera index 0
 
 # debug
 #pipeline create Dump dump

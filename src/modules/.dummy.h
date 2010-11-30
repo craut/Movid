@@ -27,7 +27,7 @@ public:
 	virtual ~moDUMMYModule();
 	
 protected:
-	void applyFilter();
+	void applyFilter(IplImage *);
 
 	MODULE_INTERNALS();
 };

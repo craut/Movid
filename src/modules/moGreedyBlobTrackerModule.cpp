@@ -22,6 +22,9 @@
 MODULE_DECLARE(GreedyBlobTracker, "native", "Track Blobs based on a simple greedy algorithm");
 
 moGreedyBlobTrackerModule::moGreedyBlobTrackerModule() : moAbstractBlobTrackerModule() {
+
+	LOG(MO_INFO, "moGreedyBlobTrackerModule 0.11");
+
 	MODULE_INIT();
 
 	this->properties["max_distance"] = new moProperty(0.1);
