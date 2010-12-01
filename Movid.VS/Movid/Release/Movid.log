@@ -1,0 +1,18 @@
+﻿Der Buildvorgang wurde am 01.12.2010 17:21:43 gestartet.
+     1>Projekt "C:\dev\Movid\Movid.VS\Movid\Movid.vcxproj" auf Knoten "2", build Ziel(e).
+     1>InitializeBuildStatus:
+         "Release\Movid.unsuccessfulbuild" wird erstellt, da "AlwaysCreate" angegeben wurde.
+       ClCompile:
+         Alle Ausgaben sind aktuell.
+         Alle Ausgaben sind aktuell.
+       Link:
+         Alle Ausgaben sind aktuell.
+         Movid.vcxproj -> C:\dev\Movid\Movid.VS\$\..\..\Movid.exe
+       FinalizeBuildStatus:
+         Die Datei "Release\Movid.unsuccessfulbuild" wird gelöscht.
+         Aktualisieren des Timestamps von "Release\Movid.lastbuildstate".
+     1>Die Erstellung des Projekts "C:\dev\Movid\Movid.VS\Movid\Movid.vcxproj" ist abgeschlossen, build Ziel(e).
+
+Das Erstellen war erfolgreich.
+
+Verstrichene Zeit 00:00:00.14
