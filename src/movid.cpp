@@ -268,8 +268,7 @@ static void web_pipeline_stream_trickle(int fd, short events, void *arg) {
 	// convert the image to JPEG
 	params.push_back(CV_IMWRITE_JPEG_QUALITY);
 	params.push_back(100);
-	//cv::imshow("test", img);
-	//cv::imencode(".jpg", img, outbuf, params);
+	cv::imencode(".jpg", img, outbuf, params);
 	outlen = outbuf.size();
 
 	// release temporary image if created
@@ -1177,7 +1176,7 @@ int parse_options(int *argc, char ***argv) {
 int main(int argc, char **argv) {
 	int ret, exit_ret = 0;
 
-	LOG(MO_INFO, "movid craut version 0.11");
+	LOG(MO_INFO, "movid craut version 0.12");
 
 	// initialize all signals
 #ifndef _WIN32

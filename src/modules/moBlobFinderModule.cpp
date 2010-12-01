@@ -25,11 +25,9 @@ MODULE_DECLARE(BlobFinder, "native", "ContourBlobs Description");
 
 moBlobFinderModule::moBlobFinderModule() : moImageFilterModule(){
 
-	LOG(MO_INFO, "moBlobFinderModule 0.19");
-
 	MODULE_INIT();
 
-	//this->storage = cvCreateMemStorage(0);
+	this->storage = cvCreateMemStorage(0);
 
 	this->output_data = new moDataStream("blob");
 	this->declareOutput(1, &this->output_data, new moDataStreamInfo(
@@ -44,7 +42,7 @@ moBlobFinderModule::moBlobFinderModule() : moImageFilterModule(){
 }
 
 moBlobFinderModule::~moBlobFinderModule() {
-	//cvReleaseMemStorage(&this->storage);
+	cvReleaseMemStorage(&this->storage);
 	delete this->blobs;
 }
 
@@ -60,11 +58,10 @@ void moBlobFinderModule::applyFilter(IplImage *src) {
 	this->clearBlobs();
 	cvCopy(src, this->output_buffer);
 
-	this->storage = cvCreateMemStorage(0);
+	cvClearMemStorage(this->storage);
 	
     CvSeq *contours = 0;
 	cvFindContours(this->output_buffer, this->storage, &contours, sizeof(CvContour), CV_RETR_CCOMP);
-
     cvDrawContours(this->output_buffer, contours, cvScalarAll(255), cvScalarAll(255), 100);
 
 	// Consider each contour a blob and extract the blob infos from it.
@@ -86,8 +83,6 @@ void moBlobFinderModule::applyFilter(IplImage *src) {
 		}
 		cur_cont = cur_cont->h_next;
 	}
-
-	cvReleaseMemStorage(&this->storage);
 	
     this->output_data->push(this->blobs);
 }

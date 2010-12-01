@@ -25,9 +25,6 @@ int moAbstractBlobTrackerModule::id_counter = 0;
 
 moAbstractBlobTrackerModule::moAbstractBlobTrackerModule() : moModule(MO_MODULE_INPUT | MO_MODULE_OUTPUT) {
 
-	
-	LOG(MO_INFO, "moAbstractBlobTrackerModule 0.17");
-
 	MODULE_INIT();
 
 	// initialize input/output
@@ -123,7 +120,7 @@ void moAbstractBlobTrackerModule::update() {
 			if (oid == id)
 				in = true;
 		}
-		if (!i126)n && ((*oit)->properties["age"]->asInteger() <= max_age))
+		if (!in && ((*oit)->properties["age"]->asInteger() <= max_age))
 			this->new_blobs->push_back(*oit);
 		else 
 			delete (*oit);
