@@ -1176,7 +1176,7 @@ int parse_options(int *argc, char ***argv) {
 int main(int argc, char **argv) {
 	int ret, exit_ret = 0;
 
-	LOG(MO_INFO, "movid craut version 0.12");
+	LOG(MO_INFO, "movid craut version 0.14");
 
 	// initialize all signals
 #ifndef _WIN32

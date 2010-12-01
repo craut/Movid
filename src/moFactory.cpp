@@ -36,7 +36,7 @@ void moFactory::init() {
 	REGISTER_MODULE(BackgroundSubtract);
 	REGISTER_MODULE(BlobFinder)
 	REGISTER_MODULE(Calibration);
-	REGISTER_MODULE(Camera);
+	REGISTER_MODULE(Camera);	
 	REGISTER_MODULE(Canny);
 	REGISTER_MODULE(Combine);
 	REGISTER_MODULE(Dilate);
@@ -46,6 +46,7 @@ void moFactory::init() {
 	REGISTER_MODULE(FiducialFinder);
 	REGISTER_MODULE(FingerTipFinder);
 	REGISTER_MODULE(GrayScale);
+	REGISTER_MODULE(GrayToColor);	
 	REGISTER_MODULE(GreedyBlobTracker);
 	REGISTER_MODULE(Highpass);
 	REGISTER_MODULE(Hsv);
@@ -56,6 +57,7 @@ void moFactory::init() {
 	REGISTER_MODULE(Mask);
 	REGISTER_MODULE(MirrorImage);
 	REGISTER_MODULE(MunkresBlobTracker);
+	REGISTER_MODULE(PS3Eye);
 	REGISTER_MODULE(PeakFinder);
 	REGISTER_MODULE(Roi);
 	REGISTER_MODULE(Smooth);
