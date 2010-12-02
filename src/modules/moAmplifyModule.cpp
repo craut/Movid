@@ -24,13 +24,15 @@ MODULE_DECLARE(Amplify, "native", "Amplifies input image (for every pixel: p = p
 
 moAmplifyModule::moAmplifyModule() : moImageFilterModule(){
 	MODULE_INIT();
-	this->properties["amplification"] = new moProperty(0.2);
+	this->properties["amplification"] = new moProperty(150.0);
+	this->properties["amplification"]->setMax(300);
 }
 
 moAmplifyModule::~moAmplifyModule() {
 }
 
 void moAmplifyModule::applyFilter(IplImage *src) {
-	cvMul(src, src, this->output_buffer, this->property("amplification").asDouble());
+	double ampf = this->property("amplification").asDouble() / 128.0f;
+	cvMul(src, src, this->output_buffer, ampf);
 }
 

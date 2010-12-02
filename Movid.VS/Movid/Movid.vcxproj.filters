@@ -201,6 +201,12 @@
     <ClInclude Include="..\..\src\modules\moGrayToColorModule.h">
       <Filter>Headerdateien\modules</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\modules\moFullscreenCalibrationModule.h">
+      <Filter>Headerdateien\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\modules\moBlurHighpassModule.h">
+      <Filter>Headerdateien\modules</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\moDaemon.cpp">
@@ -357,6 +363,12 @@
       <Filter>Quelldateien\modules</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\modules\moGrayToColorModule.cpp">
+      <Filter>Quelldateien\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\modules\moFullscreenCalibrationModule.cpp">
+      <Filter>Quelldateien\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\modules\moBlurHighpassModule.cpp">
       <Filter>Quelldateien\modules</Filter>
     </ClCompile>
   </ItemGroup>

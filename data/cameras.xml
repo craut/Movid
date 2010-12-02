@@ -3,8 +3,8 @@
     <subsection name="sensor">
         <item name="auto exposure" value="0" />
         <item name="auto gain" value="0" />
-        <item name="exposure" value="511" />
-        <item name="gain" value="18" />
+        <item name="exposure" value="361" />
+        <item name="gain" value="5" />
     </subsection>
     <subsection name="transform">
         <item name="h flip" value="0" />

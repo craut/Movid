@@ -34,8 +34,10 @@ void moFactory::init() {
 	// Keep the alphabetical order when adding new modules!
 	REGISTER_MODULE(Amplify);
 	REGISTER_MODULE(BackgroundSubtract);
+	REGISTER_MODULE(BlurHighpass);
 	REGISTER_MODULE(BlobFinder)
 	REGISTER_MODULE(Calibration);
+	//REGISTER_MODULE(FullscreenCalibration);
 	REGISTER_MODULE(Camera);	
 	REGISTER_MODULE(Canny);
 	REGISTER_MODULE(Combine);

@@ -69,7 +69,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\dev\Movid\contrib\cJSON;C:\dev\Movid\contrib\bitmap_munkres;C:\dev\Movid\contrib\XgetOpt;C:\OpenCV2.1\include\opencv;C:\dev\Movid\contrib\WOscLib-00.09;C:\dev\Movid\contrib\ptypes-2.1.1\include;C:\dev\Movid\contrib\;C:\dev\Movid\contrib\libevent-1.4.13-stable;C:\dev\Movid\contrib\libevent-1.4.13-stable\WIN32-Code;C:\dev\Movid\contrib\libevent-1.4.13-stable\compat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\dev\Movid\contrib\glut-3.7.6;C:\dev\Movid\contrib\cJSON;C:\dev\Movid\contrib\bitmap_munkres;C:\dev\Movid\contrib\XgetOpt;C:\OpenCV2.1\include\opencv;C:\dev\Movid\contrib\WOscLib-00.09;C:\dev\Movid\contrib\ptypes-2.1.1\include;C:\dev\Movid\contrib\;C:\dev\Movid\contrib\libevent-1.4.13-stable;C:\dev\Movid\contrib\libevent-1.4.13-stable\WIN32-Code;C:\dev\Movid\contrib\libevent-1.4.13-stable\compat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -92,6 +92,7 @@
     <ClInclude Include="..\..\src\modules\moAmplifyModule.h" />
     <ClInclude Include="..\..\src\modules\moBackgroundSubtractModule.h" />
     <ClInclude Include="..\..\src\modules\moBlobFinderModule.h" />
+    <ClInclude Include="..\..\src\modules\moBlurHighpassModule.h" />
     <ClInclude Include="..\..\src\modules\moCalibrationModule.h" />
     <ClInclude Include="..\..\src\modules\moCameraModule.h" />
     <ClInclude Include="..\..\src\modules\moCannyModule.h" />
@@ -102,6 +103,7 @@
     <ClInclude Include="..\..\src\modules\moErodeModule.h" />
     <ClInclude Include="..\..\src\modules\moFiducialFinderModule.h" />
     <ClInclude Include="..\..\src\modules\moFingerTipFinderModule.h" />
+    <ClInclude Include="..\..\src\modules\moFullscreenCalibrationModule.h" />
     <ClInclude Include="..\..\src\modules\moGrayScaleModule.h" />
     <ClInclude Include="..\..\src\modules\moGrayToColorModule.h" />
     <ClInclude Include="..\..\src\modules\moGreedyBlobTrackerModule.h" />
@@ -146,6 +148,7 @@
     <ClCompile Include="..\..\src\modules\moAmplifyModule.cpp" />
     <ClCompile Include="..\..\src\modules\moBackgroundSubtractModule.cpp" />
     <ClCompile Include="..\..\src\modules\moBlobFinderModule.cpp" />
+    <ClCompile Include="..\..\src\modules\moBlurHighpassModule.cpp" />
     <ClCompile Include="..\..\src\modules\moCalibrationModule.cpp" />
     <ClCompile Include="..\..\src\modules\moCameraModule.cpp" />
     <ClCompile Include="..\..\src\modules\moCannyModule.cpp" />
@@ -156,6 +159,7 @@
     <ClCompile Include="..\..\src\modules\moErodeModule.cpp" />
     <ClCompile Include="..\..\src\modules\moFiducialFinderModule.cpp" />
     <ClCompile Include="..\..\src\modules\moFingerTipFinderModule.cpp" />
+    <ClCompile Include="..\..\src\modules\moFullscreenCalibrationModule.cpp" />
     <ClCompile Include="..\..\src\modules\moGrayScaleModule.cpp" />
     <ClCompile Include="..\..\src\modules\moGrayToColorModule.cpp" />
     <ClCompile Include="..\..\src\modules\moGreedyBlobTrackerModule.cpp" />
